@@ -1,0 +1,568 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
+
+/* ESTILO DA NOVA HOME*/
+
+:root {
+    --color-primary-1: #fff9ea;
+    --color-primary-2: #bfbbff;
+    --color-primary-3: #8794f4;
+    --color-primary-4: #495ef8;
+    --color-primary-5: #1128d0;
+    --color-primary-6: #09198f;
+
+    --color-neutral-0: #fff;
+    --color-neutral-1: #333;
+}
+
+
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-primary-1);
+    
+}
+
+section {
+    padding: 28px 8%;
+}
+
+.btn-default {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1128d0;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-weight: 400;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color .3s ease;
+    color: #ffffff;
+    text-decoration: none; /* Remover sublinhado padrão */
+}
+
+.btn-default a {
+    color: inherit; /* Use a cor do texto definida para o botão */
+    text-decoration: none; /* Remover sublinhado padrão */
+}
+
+.btn-default:hover {
+    background-color: var(--color-primary-3);
+}
+
+.social-media-buttons {
+    display: flex;
+    gap: 18px;
+}
+
+.social-media-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 40px;
+    background-color: var(--color-neutral-0);
+    font-size: 1.25rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--color-neutral-1);;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow .3s ease;
+}
+
+.social-media-buttons a:hover {
+    box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    color: var(--color-primary-6);
+    font-size: 25px;
+    line-height: 1.5; /* Aumentar o espaço entre as linhas */
+    text-align: center; /* Alinhar para o centro */
+    text-transform: uppercase;
+}
+
+.section-subtitle {
+    font-size: 2rem;
+} 
+
+header {
+    width: 100%;    
+    padding: 28px 8%;
+    position: sticky;
+    top: 0;
+    background-color: var(--color-primary-1);
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    z-index: 3;
+        
+}
+
+.icon{
+    width: 150px;
+    float: left;
+    height: 70px;
+  
+    
+}
+.icon img{    
+    width: 60%;
+    height: auto;
+    display: center;
+    align-items: flex-start;
+
+}
+
+
+#navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+#navbar ul li a:hover{
+    color: var(--color-primary-4);
+}
+
+#nav_list {
+    display: flex;
+    list-style: none;
+    gap: 70px;
+    
+    
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+    
+}
+
+.nav-item.active a {
+    color: var(--color-neutral-1);
+    border-bottom: 3px solid var(--color-primary-4);
+}
+
+.submenu {
+    display: none; /* Inicia oculto por padrão */
+    position: absolute; /* Posiciona de forma absoluta em relação ao item de menu pai */
+    background-color: transparent; /* Define a cor de fundo do submenu */
+    z-index: 1; /* Garante que o submenu apareça sobre outros elementos */
+}
+
+.submenu li {
+    display: block; /* Exibe os itens do submenu como blocos */
+}
+
+.nav-item:hover .submenu {
+    display: block; /* Mostra o submenu quando o item de menu pai é hover */
+}
+
+.submenu a {
+    color: #333;
+    padding: 12px 16px; /* Espaçamento interno */
+    text-decoration: none;
+    display: block; /* Exibe os itens de submenu como blocos */
+    margin-left: 15px;
+}
+
+
+
+#mobile_btn {
+    display: none;
+}
+
+#mobile_menu {
+    display: none;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#Destaques {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.destaque {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    gap: 18px;
+    width: 22%;
+    padding: 20px;
+    background-color: var(--color-neutral-0);
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.destaque img{
+    width: 150px;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+    margin-bottom: 10px;
+
+}
+
+.dest-heart {
+    position: absolute;
+    background-color: var(--color-primary-6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.563rem;
+    color: var(--color-primary-1);
+    width: 70px;
+    height: 70px;
+    right: -10px;
+    top: -10px;
+    border-radius: 0px 37.5px 0px 42.5px;
+}
+
+.dest-description {
+    color: #434343;
+    text-align: center;
+}
+
+.dest-rate i {
+    color: var(--color-primary-6);
+}
+
+.dest-price {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#home {
+    display: flex;
+    min-height: calc(100vh - 91px);
+    position: relative;
+    
+}
+
+#cta {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 5%;
+    z-index: 1;
+    margin-left: 15px;
+    
+}
+
+#cta .title {
+    font-size: 4rem;
+    color: var(--color-neutral-1);;
+}
+
+#cta .title span {
+    font-size: 6rem;
+    color: var(--color-primary-6);
+}
+
+#cta .description {
+    font-size: 1.2rem;
+    line-height: 1.4; /* Aumentar o espaço entre as linhas */
+    
+
+}
+
+#cta_buttons {
+    display: flex;
+    gap: 24px;
+}
+
+#cta_buttons a {
+    text-decoration: none;
+    color: var(--color-primary-1);;
+}
+
+#phone_button {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 8px 14px;
+    font-weight: 500;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+#phone_button button {
+    box-shadow: none;
+}
+
+#banner {
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    width: 50%;
+    z-index: 2;    
+}
+    
+.shape img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+   
+    top: 0;
+    right: 0;
+    opacity: 0.4; /* Defina o valor de opacidade desejado entre 0 e 1 */
+        
+}
+.shape {
+    background: linear-gradient(to top, rgba(179, 177, 177, 0.3)50%,rgba(179, 177, 177, 0.3)50%);
+    width: 100%;
+    height: 90%;
+    position: absolute;    
+    top: 0;
+    right: 0;
+    
+}
+
+#group {
+    min-height: calc(100vh - 91px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+}
+
+#group_img {
+    width: 500px;
+    height: auto;
+}
+
+
+#group .section-title{
+    color: var(--color-primary-6);
+    font-size: 25px;
+    line-height: 1.5; /* Aumentar o espaço entre as linhas */
+    text-align: center; /* Alinhar para o centro */
+    text-transform: uppercase;
+}
+#group .description {
+    font-size: 1rem;
+    line-height: 1.4; /* Aumentar o espaço entre as linhas */
+    
+}
+
+#group_content {
+    width: 50%;
+}
+
+#teams {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+.team {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--color-neutral-0);
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+}
+
+.team-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.team-content h3 {
+    font-weight: 400;
+}
+
+
+.team-content p {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+}
+
+.team-content p span {
+    color: var(--color-primary-6);
+}
+
+footer {
+    background-color: var(--color-primary-2);
+}
+
+#footer_items {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 8% 24px 8%;
+    align-items: center;
+   
+}
+
+#copyright {
+    color: var(--color-neutral-1);;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5; /* Aumentar o espaço entre as linhas */
+    text-align: center;
+}
+
+
+@media screen and (max-width: 1170px) {
+    #nav_list,
+    #navbar .btn-default {
+        display: none;
+    }
+
+    #mobile_btn {
+        display: block;
+        border: none;
+        background-color: transparent;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    #mobile_menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #mobile_nav_list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 12px 0px;
+    }
+
+    #mobile_nav_list .nav-item {
+        list-style: none;
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width: 1170px) {
+    #Destaques {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .destaque {
+        width: calc(50% - 12px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .destaque {
+        width: 100%;
+    }
+
+    #menu .section-subtitle {
+        text-align: center;
+    }
+} 
+
+@media screen and (max-width: 1170px) {
+    #home
+    {
+        min-height: 110%;
+        padding-top: 0px;
+    }
+
+
+    #banner,
+    #banner img,
+    #home .shape,
+    #home .shape img {
+        display: none;
+    }
+
+    #cta,
+    #cta .description {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #phone_button button {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 1170px) {
+    #group {
+        flex-direction: column;
+    }
+
+    #group .section-subtitle {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    #group_chef {
+        display: none;
+    }
+
+    #group_content {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #group .section-subtitle {
+        font-size: 2rem;
+    }
+
+    #group_content {
+        width: 100%;
+    }
+
+    .team {
+        flex-direction: column;
+    }
+} 
+
+@media screen and (max-width: 600px) {
+    #footer_items {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
